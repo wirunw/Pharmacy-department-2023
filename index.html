@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ฝ่ายเภสัชกรรม โรงพยาบาลหมีน้อย</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f9f4;
+    }
+    h1 {
+      color: #1e8449;
+      text-align: center;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+    .section {
+      width: 60%;
+      padding: 20px;
+      background-color: #d1f2d4;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+    .section-title {
+      color: #1e8449;
+      margin-bottom: 10px;
+    }
+    .calculation {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .result {
+      margin-top: 10px;
+      color: #1e8449;
+    }
+    button {
+      background-color: #1e8449;
+      color: #ffffff;
+      border: none;
+      padding: 10px 15px;
+      font-size: 16px;
+      border-radius: 3px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #1b6d39;
+    }
+  </style>
+  <script>
+    function calculateBMI() {
+      var weight = parseFloat(document.getElementById("weight").value);
+      var height = parseFloat(document.getElementById("height").value);
+      var bmi = weight / (height * height);
+      document.getElementById("result-bmi").innerHTML = "Your BMI is: " + bmi.toFixed(2);
+    }
+    
+    function calculateCrCl() {
+      var age = parseInt(document.getElementById("age").value);
+      var weight = parseFloat(document.getElementById("weight-crcl").value);
+      var creatinine = parseFloat(document.getElementById("creatinine").value);
+      var crcl = ((140 - age) * weight) / (72 * creatinine);
+      document.getElementById("result-crcl").innerHTML = "Your Creatinine Clearance is: " + crcl.toFixed(2) + " mL/min";
+    }
+    
+    function calculateInfusionRate() {
+      var volume = parseFloat(document.getElementById("volume").value);
+      var time = parseFloat(document.getElementById("time").value);
+      var rate = volume / time;
+      document.getElementById("result-infusion").innerHTML = "The Infusion Rate is: " + rate.toFixed(2) + " mL/hour";
+    }
+  </script>
+</head>
+<body>
+  <h1>ฝ่ายเภสัชกรรม โรงพยาบาลหมีน้อย</h1>
+  
+  <div class="container">
+    <div class="section">
+      <h2 class="section-title">การให้บริการของแผนก</h2>
+       <p>เรามุ่งมั่นในการให้คำแนะนำและข้อมูลที่ถูกต้องเกี่ยวกับยาให้แก่ทุกคนในโรงพยาบาล นอกจากนี้ เรายังมีบริการเชื่อมโยงกับทีมทางการแพทย์เพื่อตรวจสอบความเหมาะสมของยาและการรักษา และมีการเฝ้าระวังและควบคุมคุณภาพของยาที่ใช้ในโรงพยาบาลอย่างเคร่งครัด</p>
+	<p>ทีมงานภาควิชาเภสัชกรรมของเราประกอบด้วยเภสัชกรที่มีความเชี่ยวชาญและประสบการณ์ในการให้บริการทางเภสัชกรรม พวกเขามีบทบาทสำคัญในการตรวจสอบและออกใบสั่งยาตามคำสั่งแพทย์ เพื่อให้มั่นใจว่ายาที่ให้มีความถูกต้องและปลอดภัยสำหรับผู้ป่วย</p>
+  <p>นอกจากนี้ ทีมงานยังมีเจ้าหน้าที่เภสัชกรรมที่รับผิดชอบในการเตรียมยาที่ถูกต้องตามคำสั่งแพทย์และการให้คำแนะนำในการใช้ยาให้แก่ผู้ป่วย พวกเขามีการตรวจสอบยาที่ต้องใช้และปฏิบัติตามหลักเกณฑ์การให้ยาที่รองรับคุณภาพและความปลอดภัย</p>
+  <p>ทีมงานของเรายังมีเจ้าหน้าที่สนับสนุนในการจัดการยาและเวชภัณฑ์ที่ใช้ในโรงพยาบาล พวกเขามีหน้าที่ในการจัดซื้อยาและวัสดุการแพทย์ที่มีคุณภาพและการจัดเก็บเพื่อให้มีความเป็นระเบียบ พวกเขาทำงานร่วมกับผู้จัดการเพื่อให้การจัดซื้อและการจัดการเวชภัณฑ์เป็นไปด้วยความรอบคอบและประสิทธิภาพ</p>
+
+
+    </div>
+    
+    <div class="section">
+      <h2 class="section-title">บุคลากรในแผนก</h2>
+       <p>ทีมงานภาควิชาเภสัชกรรมของเราประกอบด้วยบุคลากรที่มีความคุณภาพและความชำนาญในสาขาเภสัชกรรม ทุกคนมีความมุ่งมั่นในการให้บริการที่ดีที่สุดแก่ผู้ป่วยทุกท่าน</p>
+  <p>เภสัชกรมีความเชี่ยวชาญในการตรวจสอบความถูกต้องของการจัดเตรียมยา การแจ้งเตือนเกี่ยวกับประสิทธิภาพและปฏิกิริยายา และให้คำปรึกษาในการใช้ยาแก่ผู้ป่วยและทีมแพทย์</p>
+  <p>นอกจากนี้ เรายังมีเจ้าหน้าที่เภสัชกรรมที่รับผิดชอบในการจัดเตรียมและจัดส่งยาที่ถูกต้องตามคำสั่งแพทย์ พวกเขามีความรอบคอบในการตรวจสอบยาและอุปกรณ์เวชภัณฑ์เพื่อให้มั่นใจว่าได้รับสิ่งที่ถูกต้องและมีคุณภาพ</p>
+  <p>ทีมงานของเรามุ่งมั่นในการเรียนรู้และพัฒนาทักษะเภสัชกรรมอยู่เสมอ เพื่อให้บริการที่มีมาตรฐานสูงสุดและเป็นประโยชน์ต่อผู้ป่วยและทีมรักษา</p>
+    </div>
+    
+    <div class="section">
+      <h2 class="section-title">Calculations</h2>
+      
+      <div class="calculation">
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight" step="0.1">
+        <label for="height">Height (m):</label>
+        <input type="number" id="height" step="0.01">
+        <button onclick="calculateBMI()">Calculate BMI</button>
+        <div id="result-bmi" class="result"></div>
+      </div>
+      
+      <div class="calculation">
+        <label for="age">Age:</label>
+        <input type="number" id="age">
+        <label for="weight-crcl">Weight (kg):</label>
+        <input type="number" id="weight-crcl" step="0.1">
+        <label for="creatinine">Serum Creatinine:</label>
+        <input type="number" id="creatinine" step="0.01">
+        <button onclick="calculateCrCl()">Calculate Creatinine Clearance</button>
+        <div id="result-crcl" class="result"></div>
+      </div>
+      
+      <div class="calculation">
+        <label for="volume">Volume (mL):</label>
+        <input type="number" id="volume">
+        <label for="time">Time (hours):</label>
+        <input type="number" id="time">
+        <button onclick="calculateInfusionRate()">Calculate Infusion Rate</button>
+        <div id="result-infusion" class="result"></div>
+      </div>
+    </div>
+	<div class="section">
+      <h2 class="section-title">แบบประเมิน</h2>
+	<p> ฝากแบบประเมินสูตรเหล่านี้ด้วยนะครับ <a href="https://forms.gle/xTgxWCgQbT2xNwtJ6" alt="แบบฟอร์มการประเมิน">แบบฟอร์มการประเมิน</a> </p>
+	</div>
+  </div>
+</body>
+</html>
